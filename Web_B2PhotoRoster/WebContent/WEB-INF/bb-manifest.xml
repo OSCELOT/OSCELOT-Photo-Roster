@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<manifest>
+	<plugin>
+		<name value="OSCELOT Photo Roster" />
+		<description value="PhotoRoster Building Block " />
+		<handle value="photoroster" />
+		<version value="2.0.0" />
+		<requires>
+			<bbversion value="9.1" />
+		</requires>
+		<vendor>
+			<id value="osce" />
+			<name value="OSCELOT" />
+			<url value="http://www.oscelot.org" />
+			<description
+				value="OSCELOT provides resources for developers and consumers of eLearning software." />
+		</vendor>
+		<http-actions>
+			<config value="admin/config.jsp" />
+			<remove value="" />
+		</http-actions>
+		<application-defs>
+ <application handle="PhotoRoster" type="tool" name="Photo Roster" can-allow-guest="false"
+        use-ssl="false"
+
+        is-course-tool="true"
+        is-group-tool="true"
+        is-org-tool="true"
+        is-sys-tool="true">
+				<description lang="en_US">Photo Roster for displaying photos of
+					course members.
+				</description>
+				<links>
+					<link>
+						<type value="tool" />
+						<name value="Photo Roster" />
+						<url value="jsp/photoroster.jsp" />
+						<description value="Photos of Course Members" />
+					</link>
+					<link>
+						<type value="course_tool" />
+						<name value="Photo Roster" />
+						<url value="jsp/photoroster.jsp" />
+						<description value="Photos of Course Members" />
+					</link>
+				</links>
+			</application>
+		</application-defs>
+		<permissions>
+			<permission type="attribute" name="user.authinfo" actions="get"></permission>
+			<permission type="attribute" name="user.personalinfo"
+				actions="get"></permission>
+
+			<permission type="java.io.FilePermission" name="/usr/local/blackboard/logs/-"
+				actions="read,write"></permission>
+			<permission type="java.io.FilePermission" name="*" actions="read"/>
+
+		</permissions>
+	</plugin>
+</manifest>

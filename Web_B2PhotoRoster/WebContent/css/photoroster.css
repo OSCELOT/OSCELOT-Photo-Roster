@@ -1,0 +1,17 @@
+/* Print-only styles */
+@media print {
+
+div#globalNavPageContentArea {
+height: auto !important;
+overflow: visible !important;
+}
+
+}
+
+
+.hide{
+
+visibility: hidden;
+
+}
+
